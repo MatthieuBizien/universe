@@ -121,6 +121,12 @@ run ``docker ps`` and get something like this:
      $ docker ps
      CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 
+You may also want to allow your non-root user to launch Docker containers.
+
+    sudo gpasswd -a ${USER} docker
+    newgrp docker
+    sudo service docker restart
+
 Notes on installation
 ~~~~~~~~~~~~~~~~~~~~~
 
